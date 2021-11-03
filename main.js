@@ -6,7 +6,7 @@ const pokemonArray = [
     { species : 'Ditto', type1: 'Normal', nickname:'Cheryl', level : 18},
     { species : 'Eevee', type1: 'Normal', nickname:'Larry', level : 22},
     { species : 'Growlithe', type1: 'Fire', nickname:'Ted', level : 32},
-    { species : 'Pidgey', type1: 'Flying', type2: 'Normal', nickname:'Jaice', level : 11},
+    { species : 'Pidgey', type1: 'Flying', type2: 'Normal', nickname:'Jaice', level : 7},
 ]
 
 
@@ -51,3 +51,6 @@ const nicknames = pokemonArray.map(pokemon => pokemon.nickname);
 console.log(nicknames);
 
 
+console.warn('Printing pokemon in order of level');
+const orderedList = pokemonArray.sort((a, b) => a.level >= b.level ? 1 : -1);
+printPokemonArray(orderedList);
