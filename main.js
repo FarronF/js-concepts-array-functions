@@ -54,3 +54,10 @@ console.log(nicknames);
 console.warn('Printing pokemon in order of level');
 const orderedList = pokemonArray.sort((a, b) => a.level >= b.level ? 1 : -1);
 printPokemonArray(orderedList);
+
+console.warn('Totalling level')
+const totalLevel = pokemonArray.reduce((total, pokemon) => {
+    return total + pokemon.level;
+}, 0)
+
+console.log(totalLevel);
