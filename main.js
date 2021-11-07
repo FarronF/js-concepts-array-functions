@@ -61,3 +61,11 @@ const totalLevel = pokemonArray.reduce((total, pokemon) => {
 }, 0)
 
 console.log(totalLevel);
+
+console.warn('Totalling level of pokemon over level 30')
+const totalLevelOver30 =  pokemonArray
+    .filter(pokemon => pokemon.level >= 30)
+    .map(pokemon => pokemon.level)
+    .reduce((total, level) => total + level, 0)
+
+console.log(totalLevelOver30);
